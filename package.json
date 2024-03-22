@@ -1,0 +1,15 @@
+{
+  "name": "brave-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Wojciech Dydacki",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "tsc": "^2.0.4"
+  }
+}
