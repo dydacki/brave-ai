@@ -1,1 +1,1 @@
-console.log('Hello AI')
+console.log('Hello AI');

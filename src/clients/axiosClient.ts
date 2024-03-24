@@ -1,5 +1,5 @@
 import axios, {AxiosInstance} from 'axios';
-import {TaskDevClientConfig} from '../model/model';
+import {TaskDevClientConfig} from '@/model/model';
 
 export const useAxios = (config: TaskDevClientConfig): AxiosInstance => {
   const client = axios.create({

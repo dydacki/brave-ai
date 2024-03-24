@@ -1,6 +1,6 @@
-import {useAxios} from './axiosClient';
+import {useAxios} from '@/clients/axiosClient';
 import {AxiosInstance} from 'axios';
-import {Answer, TaskDevClientConfig, TokenResponse, AnswerResponse, Task} from '../model/model';
+import {Answer, TaskDevClientConfig, TokenResponse, AnswerResponse, Task} from '@/model/model';
 
 export class TaskDevClient {
   private axios: AxiosInstance;

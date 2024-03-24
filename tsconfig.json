@@ -4,7 +4,10 @@
     "moduleResolution": "NodeNext",
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@/*": ["src/*"],
+    }
   },
     "include": ["src/**/*.ts"],
     "exclude": ["node_modules", "**/*.test.ts"],
