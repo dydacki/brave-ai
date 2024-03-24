@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "module": "ESNext",
+    "moduleResolution": "NodeNext",
     "noEmit": true,
+    "allowSyntheticDefaultImports": true,
     "types": ["node"]
   },
     "include": ["src/**/*.ts"],
