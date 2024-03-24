@@ -1,6 +1,6 @@
-import {useAxios} from '@/clients/axiosClient';
+import {useAxios} from '../clients/axiosClient.ts';
 import {AxiosInstance} from 'axios';
-import {Answer, TaskDevClientConfig, TokenResponse, AnswerResponse, Task} from '@/model/model';
+import {Answer, TaskDevClientConfig, TokenResponse, AnswerResponse, Task} from '../model/model.ts';
 
 export class TaskDevClient {
   private axios: AxiosInstance;
@@ -13,7 +13,7 @@ export class TaskDevClient {
 
   private getAuthorizationBody() {
     return {
-      apiKey: this.apiKey,
+      apikey: this.apiKey,
     };
   }
 
