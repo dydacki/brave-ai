@@ -23,14 +23,20 @@ export abstract class TaskHandler {
     this.devToken = '';
   }
 
-  protected async getTask(taskName: string): Promise<Task> {
+  private async getAndSaveToken(taskName: string): Promise<string> {
     const tokenResponse = await this.devClient.getToken(taskName);
     if (tokenResponse.code !== 0) {
       throw new Error(`Could not obtain token: ${tokenResponse.msg}/`);
     }
 
-    this.devToken = tokenResponse.token as string;
-    return await this.devClient.getTask(this.devToken);
+    const token = tokenResponse.token as string;
+    this.devToken = token;
+    return token;
+  }
+
+  protected async getTask(taskName: string): Promise<Task> {
+    const token = (await this.getAndSaveToken(taskName)) as string;
+    return await this.devClient.getTask(token);
   }
 
   protected async submitAnswer(response: any): Promise<AnswerResponse> {
