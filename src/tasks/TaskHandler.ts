@@ -35,7 +35,7 @@ export abstract class TaskHandler {
   }
 
   protected async getTask(taskName: string): Promise<Task> {
-    const token = (await this.getAndSaveToken(taskName)) as string;
+    const token = await this.getAndSaveToken(taskName);
     return await this.devClient.getTask(token);
   }
 
