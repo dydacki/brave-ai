@@ -1,5 +1,5 @@
 import {TaskHandler} from './TaskHandler.js';
-import {Answer} from '../model/model.ts';
+import {Answer, AnswerResponse} from '../model/model.ts';
 import {HelloApiTask} from '../model/taskModel.ts';
 
 export class HelloApiHandler extends TaskHandler {
@@ -7,7 +7,7 @@ export class HelloApiHandler extends TaskHandler {
     super();
   }
 
-  private asAnswer(task: HelloApiTask): Answer {
+  private taskAsAnswer(task: HelloApiTask): Answer {
     return {
       answer: task.cookie,
     };
@@ -20,8 +20,8 @@ export class HelloApiHandler extends TaskHandler {
     }
 
     console.info('Received task');
-    const answer = this.asAnswer(task as HelloApiTask);
-    const response = await this.submitAnswer(answer);
+    const answer: Answer = this.taskAsAnswer(task as HelloApiTask);
+    const response: AnswerResponse = await this.submitAnswer(answer);
     console.info(`Received response: ${JSON.stringify(response)}`);
   }
 }
