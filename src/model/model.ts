@@ -8,11 +8,6 @@ export interface Answer {
   answer: string | number | boolean | Record<string, unknown>;
 }
 
-export interface Result {
-  code: number;
-  msg: string;
-}
-
 export interface TokenResponse {
   code: number;
   msg: string;

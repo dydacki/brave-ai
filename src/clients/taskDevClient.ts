@@ -1,4 +1,4 @@
-import {useAxios} from '../clients/axiosClient.ts';
+import {useAxios} from './axiosClient.ts';
 import {AxiosInstance} from 'axios';
 import {Answer, TaskDevClientConfig, TokenResponse, AnswerResponse, Task} from '../model/model.ts';
 
