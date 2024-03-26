@@ -1,4 +1,4 @@
-import {TaskHandler} from './TaskHandler.js';
+import {TaskHandler} from './TaskHandler.ts';
 import {Answer, AnswerResponse} from '../model/model.ts';
 import {HelloApiTask} from '../model/taskModel.ts';
 
