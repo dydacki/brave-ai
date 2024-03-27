@@ -5,7 +5,7 @@ export interface TaskDevClientConfig {
 }
 
 export interface Answer {
-  answer: string | number | boolean | Record<string, unknown>;
+  answer: string | string[] | number | boolean | Record<string, unknown>;
 }
 
 export interface TokenResponse {

@@ -26,7 +26,7 @@ export class ModerationHandler extends TaskHandler {
     return response.results.some(result => result.flagged) ? 1 : 0;
   }
 
-  private async moderate(input: Array<string>): Promise<Array<0 | 1>> {
+  private async moderateInput(input: Array<string>): Promise<Array<0 | 1>> {
     const promises: Array<Promise<0 | 1>> = [];
     input.forEach(inputText => promises.push(this.moderateText(inputText)));
     return await Promise.all(promises);
@@ -39,7 +39,7 @@ export class ModerationHandler extends TaskHandler {
     }
 
     console.info('Received task with input', JSON.stringify(task.input));
-    const moderated = await this.moderate(task.input);
+    const moderated = await this.moderateInput(task.input);
     const answer = this.buildAnswer(moderated);
     const response = await this.submitAnswer(answer);
     console.info(`Received response: ${JSON.stringify(response)}`);
