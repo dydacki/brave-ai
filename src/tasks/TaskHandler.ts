@@ -39,6 +39,10 @@ export abstract class TaskHandler {
     return await this.devClient.getTask(token);
   }
 
+  protected async postQuery(question: string): Promise<AnswerResponse> {
+    return await this.devClient.postQuery(question, this.devToken);
+  }
+
   protected async submitAnswer(response: any): Promise<AnswerResponse> {
     return await this.devClient.submitAnswer(response, this.devToken);
   }

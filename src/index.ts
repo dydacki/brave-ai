@@ -1,6 +1,7 @@
 import {BloggerHandler} from './tasks/BloggerHandler.ts';
 import {HelloApiHandler} from './tasks/HelloApiHandler.ts';
 import {ModerationHandler} from './tasks/ModerationHandler.ts';
+import {LiarHandler} from './tasks/LiarHandler.ts';
 import {TaskHandler} from './tasks/TaskHandler.ts';
 
 if (process.argv.length < 3) {
@@ -20,6 +21,9 @@ switch (taskName) {
     break;
   case 'blogger':
     handler = new BloggerHandler();
+    break;
+  case 'liar':
+    handler = new LiarHandler();
     break;
   default:
     console.error(`Unknown task: ${taskName}`);

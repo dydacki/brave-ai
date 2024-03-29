@@ -1,6 +1,7 @@
 import {useAxios} from './axiosClient.ts';
 import {AxiosInstance} from 'axios';
 import {Answer, TaskDevClientConfig, TokenResponse, AnswerResponse, Task} from '../model/model.ts';
+import FormData from 'form-data';
 
 export class TaskDevClient {
   private axios: AxiosInstance;
@@ -55,6 +56,19 @@ export class TaskDevClient {
   async getTask(token: string): Promise<Task> {
     try {
       const response = await this.axios.get<Task>(`/task/${token}`);
+      return response.data;
+    } catch (error) {
+      this.printErrorDetails(error);
+      throw error;
+    }
+  }
+
+  async postQuery(question: string, token: string): Promise<AnswerResponse> {
+    try {
+      const formData = new FormData();
+      formData.append('question', question);
+      const headers = {headers: formData.getHeaders()};
+      const response = await this.axios.post(`/task/${token}`, formData, headers);
       return response.data;
     } catch (error) {
       this.printErrorDetails(error);

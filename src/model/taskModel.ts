@@ -1,4 +1,4 @@
-import {Task} from './model.js';
+import {Task} from './model.ts';
 
 export interface HelloApiTask extends Task {
   code: number;

@@ -1,4 +1,3 @@
-// import OpenAi from 'openai';
 import OpenAi from 'openai';
 import {TaskHandler} from './TaskHandler.ts';
 import {BloggerTask, BloggerChapterRequest, BloggerChapterRequestRole} from '../model/taskModel.ts';
