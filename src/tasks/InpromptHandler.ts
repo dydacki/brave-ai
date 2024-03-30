@@ -64,8 +64,8 @@ export class InpromptHandler extends TaskHandler {
     const data = this.getDataForName(name);
     if (data) {
       const response = await this.getAnswerToQuestion(this.task.question, data);
-      const respone: AnswerResponse = await this.submitAnswer(this.asAnswer(response));
-      console.log(`Received response: ${JSON.stringify(respone, null, 2)}`);
+      const answerResponse: AnswerResponse = await this.submitAnswer(this.asAnswer(response));
+      console.log(`Received response: ${JSON.stringify(answerResponse, null, 2)}`);
     }
   }
 }

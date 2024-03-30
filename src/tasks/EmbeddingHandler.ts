@@ -1,10 +1,9 @@
 import {OpenAIEmbeddings as Embeddings} from '@langchain/openai';
 import {TaskHandler} from './TaskHandler.ts';
-import {ModerationTask} from '../model/taskModel.ts';
 import {useEmbeddingsOpenAI} from '../clients/langchainClient.js';
 
 export class EmbeddingHandler extends TaskHandler {
-  private embeddings: Embeddings | undefined;
+  private readonly embeddings: Embeddings | undefined;
 
   constructor() {
     super();
