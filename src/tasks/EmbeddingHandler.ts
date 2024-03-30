@@ -2,6 +2,7 @@ import {OpenAIEmbeddings as Embeddings} from '@langchain/openai';
 import {TaskHandler} from './TaskHandler.ts';
 import {useEmbeddingsOpenAI} from '../clients/langchainClient.js';
 
+// noinspection JSUnusedGlobalSymbols
 export class EmbeddingHandler extends TaskHandler {
   private readonly embeddings: Embeddings | undefined;
 

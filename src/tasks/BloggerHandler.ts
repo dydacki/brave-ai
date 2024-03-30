@@ -4,6 +4,7 @@ import {BloggerTask, BloggerChapterRequest, BloggerChapterRequestRole} from '../
 import {useOpenAi} from '../clients/openAiClient.ts';
 import {Answer} from '../model/model.js';
 
+// noinspection JSUnusedGlobalSymbols
 export class BloggerHandler extends TaskHandler {
   private openAiClient: OpenAi;
 

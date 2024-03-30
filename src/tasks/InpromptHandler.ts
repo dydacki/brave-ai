@@ -6,6 +6,7 @@ import {InpromptTask} from '../model/taskModel.ts';
 import {useChatOpenAI} from '../clients/langchainClient.ts';
 import {AnswerResponse} from '../model/model.ts';
 
+// noinspection JSUnusedGlobalSymbols
 export class InpromptHandler extends TaskHandler {
   private readonly langChainClient: ChatOpenAI;
   private readonly mameTemplate: string = 'Return the name from the phrase: {phrase}. Reply with name only. Answer:';

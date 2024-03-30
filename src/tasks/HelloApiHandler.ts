@@ -2,6 +2,7 @@ import {TaskHandler} from './TaskHandler.ts';
 import {Answer, AnswerResponse} from '../model/model.ts';
 import {HelloApiTask} from '../model/taskModel.ts';
 
+// noinspection JSUnusedGlobalSymbols
 export class HelloApiHandler extends TaskHandler {
   constructor() {
     super();

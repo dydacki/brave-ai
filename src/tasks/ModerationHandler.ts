@@ -3,6 +3,7 @@ import {TaskHandler} from './TaskHandler.ts';
 import {ModerationTask, ModerationTaskAnswer} from '../model/taskModel.ts';
 import {useOpenAi} from '../clients/openAiClient.ts';
 
+// noinspection JSUnusedGlobalSymbols
 export class ModerationHandler extends TaskHandler {
   private openAiClient: OpenAi;
 

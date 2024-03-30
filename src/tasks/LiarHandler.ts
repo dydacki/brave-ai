@@ -5,6 +5,7 @@ import {TaskHandler} from './TaskHandler.ts';
 import {useChatOpenAI} from '../clients/langchainClient.ts';
 import {AnswerResponse} from '../model/model.ts';
 
+// noinspection JSUnusedGlobalSymbols
 export class LiarHandler extends TaskHandler {
   private readonly langChainClient: ChatOpenAI;
   private readonly prompt: string = 'Is 1kg contained of 1000 grams?';
