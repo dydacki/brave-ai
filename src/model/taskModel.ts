@@ -18,6 +18,11 @@ export interface BloggerTask extends Task {
   blog: Array<string>;
 }
 
+export interface InpromptTask extends Task {
+  input: Array<string>;
+  question: string;
+}
+
 export type ModerationTaskAnswer = Array<0 | 1>;
 
 export interface BloggerChapterRequestRole {
