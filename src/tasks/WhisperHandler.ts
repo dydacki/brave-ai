@@ -4,6 +4,7 @@ import {TaskHandler} from './TaskHandler.ts';
 import {useOpenAi} from '../clients/openAiClient.ts';
 import {getDirectoryPath} from '../utils/FileHandler.ts';
 
+// noinspection JSUnusedGlobalSymbols
 export class WhisperHandler extends TaskHandler {
   private openAiClient: OpenAi;
 
@@ -36,10 +37,10 @@ export class WhisperHandler extends TaskHandler {
 
     const task = await this.getTask('whisper');
     if (task.code !== 0) {
-      throw new Error(`Could not obtain moderation task: ${task.msg}`);
+      throw new Error(`Could not obtain whisper task: ${task.msg}`);
     }
 
-    console.info('Received embedding task', JSON.stringify(JSON.stringify(task, null, 2)));
+    console.info('Received whisper task', JSON.stringify(JSON.stringify(task, null, 2)));
     const answerResponse = await this.submitAnswer(answer);
     console.info(`Received response: ${JSON.stringify(answerResponse, null, 2)}`);
   }
