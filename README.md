@@ -38,7 +38,7 @@ To run the application, use the following command:
 npm run start _taskName_
 ```
 
-Replace `_taskName_` with the name of the specific task you want to handle. This should correspond to the first word in the filename of the task class located in the `src/tasks` subfolder.
+Replace `_taskName_` with the name of the specific task you want to handle. This should correspond to the first word in the filename of the task class located in the `src/tasks` sub-folder. Character casing of the task name does not matter.
 
 ## Application Flow
 
