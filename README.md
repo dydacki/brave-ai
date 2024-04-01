@@ -6,7 +6,7 @@ This project is a TypeScript application designed to handle specific course task
 
 ## Task Handling
 
-The core of the task handling logic is the `TaskHandler` abstract class. This class acts as a base for all specific task classes, providing a common interface and shared functionality. Internally, `TaskHandler` uses an instance of `TaskDevClient` class to communicate with the brave course API. This communication is facilitated by the Axios HTTP client under the hood.
+The core of the task handling logic is the `TaskHandler` abstract class. This class acts as a base for all specific task classes, providing a common interface and shared functionality. Internally, `TaskHandler` uses an instance of `TaskDevClient` class to communicate with the Brave Course API. This communication is facilitated by the Axios HTTP client under the hood.
 
 ## Project Setup
 
