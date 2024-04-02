@@ -18,6 +18,13 @@ export interface BloggerTask extends Task {
   blog: Array<string>;
 }
 
+export interface ScraperTask extends Task {
+  code: number;
+  msg: string;
+  input: string;
+  question: string;
+}
+
 export interface InpromptTask extends Task {
   input: Array<string>;
   question: string;
