@@ -78,9 +78,7 @@ export class ScraperHandler extends TaskHandler {
 
     console.info('Received scraper task', JSON.stringify(task, null, 2));
     const briefedText = await this.briefText(task.question, pageContents);
-    console.log('Briefed text:', briefedText);
-    const answer = this.asAnswer(briefedText);
-    const response = await this.submitAnswer(answer);
+    const response = await this.submitAnswer(this.asAnswer(briefedText));
     console.log(`Received response: ${JSON.stringify(response, null, 2)}`);
   }
 }
