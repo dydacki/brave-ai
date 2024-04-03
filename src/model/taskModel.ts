@@ -25,6 +25,12 @@ export interface ScraperTask extends Task {
   question: string;
 }
 
+export interface WhoAmITask extends Task {
+  code: number;
+  msg: string;
+  hint: string;
+}
+
 export interface InpromptTask extends Task {
   input: Array<string>;
   question: string;
