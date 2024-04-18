@@ -35,6 +35,10 @@ export interface SearchTask extends Task {
   question: string;
 }
 
+export interface PeopleTask extends Task {
+  question: string;
+}
+
 export interface InpromptTask extends Task {
   input: Array<string>;
   question: string;

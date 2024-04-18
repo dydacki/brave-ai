@@ -31,14 +31,23 @@ export class QuadrantClient {
   }
 
   async upsertBatch(collectionName: string, data: any[]) {
-    await this.qdrant.upsert(collectionName, {
-      wait: true,
-      batch: {
-        ids: data.map(point => point.id),
-        vectors: data.map(point => point.vector),
-        payloads: data.map(point => point.payload),
-      },
-    });
+    const dataChunks = [];
+    if (data.length > 1000) {
+      for (let i = 0; i < data.length; i += 1000) {
+        dataChunks.push(data.slice(i, i + 1000));
+      }
+    }
+
+    for (const chunk of dataChunks) {
+      await this.qdrant.upsert(collectionName, {
+        wait: true,
+        batch: {
+          ids: chunk.map(point => point.id),
+          vectors: chunk.map(point => point.vector),
+          payloads: chunk.map(point => point.payload),
+        },
+      });
+    }
   }
 
   async searchCollection(collectionName: string, queryEmbedding: number[], limit: number) {
