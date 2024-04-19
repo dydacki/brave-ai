@@ -39,6 +39,11 @@ export interface PeopleTask extends Task {
   question: string;
 }
 
+export interface KnowledgeTask extends Task {
+  question: string;
+  [key: string]: any;
+}
+
 export interface InpromptTask extends Task {
   input: Array<string>;
   question: string;

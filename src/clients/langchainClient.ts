@@ -5,6 +5,7 @@ import {OpenAIEmbeddings} from 'langchain/embeddings/openai';
 export const useChatOpenAI = () => {
   return new ChatOpenAI({
     openAIApiKey: process.env.OPEN_AI_API_KEY,
+    model: 'gpt-4-0613',
     temperature: 0,
   });
 };
