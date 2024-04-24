@@ -39,6 +39,28 @@ export const schemas = {
       },
     },
   },
+  decision: {
+    name: 'toDo',
+    description:
+      'If date or time is mentioned or named, return Calendar. Otherwise, return a ToDo item. Calculate the nearest date based on today for the time specified and include for Calendar',
+    parameters: {
+      type: 'object',
+      properties: {
+        tool: {
+          type: 'string',
+          description: 'Type of task: Calendar if the date or time were specified, otherwise ToDo',
+        },
+        desc: {
+          type: 'string',
+          description: 'Task description without date or time',
+        },
+        date: {
+          type: 'string',
+          description: 'Date in format YYYY-MM-DD. Include only for Calendar',
+        },
+      },
+    },
+  },
 };
 
 export const parseFunctionCall = (result: BaseMessageChunk): {name: string; args: any} | null => {

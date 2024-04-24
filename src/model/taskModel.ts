@@ -49,6 +49,10 @@ export interface InpromptTask extends Task {
   question: string;
 }
 
+export interface ToolsTask extends Task {
+  question: string;
+}
+
 export type ModerationTaskAnswer = Array<0 | 1>;
 
 export interface BloggerChapterRequestRole {

@@ -1,7 +1,7 @@
 import {TaskHandler} from './TaskHandler.ts';
 import {useChatOpenAI} from '../clients/langchainClient.ts';
 import {KnowledgeTask} from '../model/taskModel.ts';
-import {HumanMessage, SystemMessage} from 'langchain/schema';
+import {HumanMessage} from 'langchain/schema';
 import {schemas, parseFunctionCall} from '../utils/FunctionSchemas.ts';
 
 type CurrencyParams = {
