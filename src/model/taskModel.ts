@@ -53,6 +53,10 @@ export interface ToolsTask extends Task {
   question: string;
 }
 
+export interface GnomeTask extends Task {
+  url: string;
+}
+
 export type ModerationTaskAnswer = Array<0 | 1>;
 
 export interface BloggerChapterRequestRole {
