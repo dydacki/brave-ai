@@ -64,4 +64,9 @@ export interface BloggerChapterRequestRole {
   content: string;
 }
 
+export interface MemeTask extends Task {
+  image: string;
+  text: string;
+}
+
 export interface BloggerChapterRequest extends Array<BloggerChapterRequestRole> {}
