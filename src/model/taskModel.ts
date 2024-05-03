@@ -70,3 +70,9 @@ export interface MemeTask extends Task {
 }
 
 export interface BloggerChapterRequest extends Array<BloggerChapterRequestRole> {}
+
+export interface Friends {
+  zygfryd: string[];
+  stefan: string[];
+  ania: string[];
+}
