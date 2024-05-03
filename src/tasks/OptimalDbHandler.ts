@@ -41,9 +41,6 @@ export class OptimalDbHandler extends TaskHandler {
       const friendData = friends[friendsName];
 
       result += `${friendsName}: `;
-      console.log(result);
-
-      // for (let i = 0; i < 20; i += 5) {
       for (let i = 0; i < friendData.length; i += 5) {
         const friendDataElements = friendData.slice(i, i + 5);
         result += await this.compressFriendChunk(friendDataElements);
@@ -51,7 +48,6 @@ export class OptimalDbHandler extends TaskHandler {
       }
 
       result += '\n';
-      console.log(`Compressed ${friendsName} data`);
     }
 
     return result.trim();
