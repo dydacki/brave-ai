@@ -8,11 +8,6 @@ import {SystemMessage} from 'langchain/schema';
 export class OptimalDbHandler extends TaskHandler {
   private webClient: WebClient;
   private modelChat: any;
-  private compressedFriends: Friends = {
-    ania: [],
-    stefan: [],
-    zygfryd: [],
-  };
 
   constructor() {
     super();
