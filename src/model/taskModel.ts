@@ -69,6 +69,10 @@ export interface MemeTask extends Task {
   text: string;
 }
 
+export interface MdToHtmlTask extends Task {
+  input: string;
+}
+
 export interface BloggerChapterRequest extends Array<BloggerChapterRequestRole> {}
 
 export interface Friends {
